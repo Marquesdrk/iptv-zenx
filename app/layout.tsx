@@ -5,11 +5,11 @@ import './globals.css';
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Nexora Play | Filmes, séries e esportes',
-  description: 'Filmes, séries, esportes e entretenimento em diversos dispositivos. Escolha seu plano e fale conosco pelo WhatsApp.',
-  metadataBase: new URL('https://nexoraplay.example'),
+  title: 'Cine Sena | Seu entretenimento sem limites',
+  description: 'Filmes, séries, esportes e canais ao vivo em todos os seus dispositivos.',
+  metadataBase: new URL('https://cinesena.example'),
   alternates: { canonical: '/' },
-  openGraph: { title: 'Nexora Play | Entretenimento do seu jeito', description: 'Escolha seu plano e comece a assistir.', type: 'website' },
+  openGraph: { title: 'Cine Sena | Seu entretenimento sem limites', description: 'Solicite seu teste grátis e comece a assistir.', type: 'website' },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
