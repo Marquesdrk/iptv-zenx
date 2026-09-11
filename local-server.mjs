@@ -22,6 +22,7 @@ const server = http.createServer((req,res)=>{
   if (url.pathname === '/styles.css') { res.writeHead(200, {'content-type':'text/css; charset=utf-8'}); res.end(fs.readFileSync(path.join(root,'app','globals.css'),'utf8').replace(/^@import[^;]+;\s*/gm,'')); return; }
   if (url.pathname === '/cine.css') { res.writeHead(200, {'content-type':'text/css; charset=utf-8','cache-control':'no-cache'}); res.end(fs.readFileSync(path.join(root,'public','cine.css'),'utf8')); return; }
   if (url.pathname === '/homem-aranha-longe-de-casa.png') { res.writeHead(200, {'content-type':'image/png','cache-control':'no-cache'}); res.end(fs.readFileSync(path.join(root,'public','homem-aranha-longe-de-casa.png'))); return; }
+  if (url.pathname === '/cine-card.png') { res.writeHead(200, {'content-type':'image/png','cache-control':'no-cache'}); res.end(fs.readFileSync(path.join(root,'public','cine-card.png'))); return; }
   if (/^\/catalogo-(?:\d+|extra-\d+)\.png$/.test(url.pathname)) { const file = path.join(root, 'public', path.basename(url.pathname)); if (fs.existsSync(file)) { res.writeHead(200, {'content-type':'image/png','cache-control':'no-cache'}); res.end(fs.readFileSync(file)); return; } }
   if (/^\/icons\/[a-z-]+\.png$/.test(url.pathname)) { const file = path.join(root, 'public', url.pathname.slice(1)); if (fs.existsSync(file)) { res.writeHead(200, {'content-type':'image/png','cache-control':'no-cache'}); res.end(fs.readFileSync(file)); return; } }
   res.writeHead(404); res.end('Not found');

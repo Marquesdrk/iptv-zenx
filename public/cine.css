@@ -17,3 +17,20 @@
 .categories span{align-items:center;display:inline-flex;gap:8px}.categories span img{display:block;height:22px;object-fit:contain;width:22px}
 .catalog-heading{margin:70px 0 28px;text-align:left}.catalog-heading h2{font-size:28px;letter-spacing:-.035em;margin:10px 0}.poster-catalog{display:grid;gap:20px;grid-template-columns:repeat(6,1fr)}.catalog-card{background-position:center;background-size:cover;border-radius:9px;box-shadow:0 12px 25px #0005;height:270px;overflow:hidden;position:relative;transition:transform .25s}.catalog-card:hover{transform:translateY(-6px)}.catalog-card:after{background:linear-gradient(transparent 40%,#120306f5);content:"";inset:0;position:absolute}.catalog-card>div{bottom:15px;left:15px;position:absolute;z-index:1}.catalog-card strong,.catalog-card span{color:#fff;display:block}.catalog-card strong{font-size:15px}.catalog-card span{font-size:11px;margin-top:4px;opacity:.78}.dark-mode .catalog-card{box-shadow:0 12px 25px #0008}@media(max-width:900px){.poster-catalog{grid-template-columns:repeat(4,1fr)}}@media(max-width:620px){.poster-catalog{grid-template-columns:repeat(2,1fr)}.catalog-card{height:245px}}
 .poster-row .poster:nth-of-type(2){background-color:#3a271c;background-blend-mode:multiply;background-size:cover;background-position:center 35%}
+.device-visual{background-image:linear-gradient(135deg,rgba(24,7,12,.18),rgba(8,8,10,.72)),url('/cine-card.png')!important;background-position:center;background-size:cover}
+body.dark-mode main .device-visual{background:linear-gradient(135deg,rgba(24,7,12,.12),rgba(8,8,10,.22)),url('/cine-card.png') center/cover!important}
+body.dark-mode main .device-visual:before{display:none!important}
+@media(max-width:800px){
+  .navbar{gap:8px;padding:0 4px}
+  .brand{flex:0 0 auto;font-size:18px;letter-spacing:.02em;white-space:nowrap}
+  .nav-cta{flex:0 0 auto;font-size:12px;line-height:1.15;margin-left:auto;margin-right:2px;padding:11px 13px;text-align:center;white-space:nowrap}
+  .menu{flex:0 0 34px;font-size:26px;line-height:1;padding:0}
+  .theme-toggle{flex:0 0 34px;height:34px;margin-left:2px;width:34px}
+  .hero-content{padding:92px 18px 115px}
+  .hero-content h1{font-size:clamp(36px,9vw,43px);line-height:1.05;margin-bottom:20px}
+  .hero-content p{font-size:16px;line-height:1.5}
+  .hero-actions{gap:12px;max-width:340px}
+  .hero-actions .primary,.hero-actions .secondary{justify-content:center;min-height:54px;width:100%}
+  .platforms{gap:10px;justify-content:space-between;margin-left:auto;margin-right:auto;max-width:340px}
+  .platforms span{font-size:10px}
+}
