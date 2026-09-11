@@ -6,6 +6,8 @@
   ],
   "routes": [
     { "src": "/cine.css", "dest": "/public/cine.css" },
+    { "src": "/cine-card.png", "dest": "/public/cine-card.png" },
+    { "src": "/homem-aranha-longe-de-casa.png", "dest": "/public/homem-aranha-longe-de-casa.png" },
     { "src": "/icons/(.*)", "dest": "/public/icons/$1" },
     { "src": "/(catalogo-.*\\.png)", "dest": "/public/$1" },
     { "src": "/(.*)", "dest": "/local-preview.html" }

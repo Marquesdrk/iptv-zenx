@@ -17,3 +17,49 @@
     link.href = url.toString();
   });
 </script>
+<script>
+  (() => {
+    const phone = '5551996386750';
+    const message = 'Olá! Vim pelo site Cine Sena IPTV e gostaria de conhecer os planos e fazer um teste grátis.';
+    document.querySelectorAll('a[href*="wa.me/"]').forEach((link) => {
+      const url = new URL(link.href);
+      url.pathname = `/${phone}`;
+      if (!url.searchParams.has('text')) url.searchParams.set('text', message);
+      link.href = url.toString();
+    });
+    const catalog = [
+      ['Homem-Aranha: Longe de Casa', 'Ação', 'homem-aranha-longe-de-casa.png'],
+      ['O Mentalista', 'Séries', 'catalogo-extra-2.png'], ['Meu Nome é Farah', 'Drama', 'catalogo-extra-3.png'],
+      ['Fúria', 'Suspense', 'catalogo-extra-4.png'], ['Harry Potter', 'Fantasia', 'catalogo-extra-5.png'],
+      ['Colisão', 'Drama', 'catalogo-extra-6.png'], ['The Early Spring', 'Romance', 'catalogo-extra-7.png'],
+      ['O Poderoso Chefão', 'Clássico', 'catalogo-extra-8.png'], ['Um Sonho de Liberdade', 'Drama', 'catalogo-extra-9.png'],
+      ['A Lista de Schindler', 'História', 'catalogo-extra-10.png'], ['Toy Story', 'Infantil', 'catalogo-extra-11.png'],
+      ['Batman', 'Ação', 'catalogo-extra-12.png'], ['Vingadores: Ultimato', 'Ação', 'catalogo-extra-13.png'],
+      ['Gladiador', 'Épico', 'catalogo-extra-14.png'], ['Odisseia', 'Aventura', 'catalogo-extra-16.png'],
+      ['A Morte da Esposa do Pastor', 'Drama', 'catalogo-extra-17.png'], ['Operação: Lioness', 'Ação', 'catalogo-extra-18.png']
+    ];
+    const showcase = document.querySelector('.showcase .wrap');
+    if (showcase) {
+      const heading = document.createElement('div'); heading.className = 'catalog-heading';
+      heading.innerHTML = '<span class="kicker">MAIS PARA VOCÊ ASSISTIR</span><h2>Histórias que valem a sessão</h2>';
+      const grid = document.createElement('div'); grid.className = 'poster-catalog';
+      catalog.forEach(([title, category, image]) => {
+        const card = document.createElement('article'); card.className = 'catalog-card'; card.style.backgroundImage = `url(/${image})`;
+        card.innerHTML = `<div><strong>${title}</strong><span>${category}</span></div>`; grid.appendChild(card);
+      });
+      showcase.append(heading, grid);
+    }
+    const mosaicImages = Array.from({length: 18}, (_, i) => `/catalogo-extra-${i + 1}.png`);
+    document.querySelectorAll('.mosaic div').forEach((el, i) => { el.style.backgroundImage = `url(${mosaicImages[i]})`; });
+    const benefitIcons = ['rocket', 'server', 'headset', 'tv', 'globe', 'check'];
+    document.querySelectorAll('.benefit-icon').forEach((el, i) => { el.textContent = ''; const img = document.createElement('img'); img.src = `/icons/${benefitIcons[i]}.png`; img.alt = ''; el.appendChild(img); });
+    const deviceIcons = ['device-smart-tv', 'device-android-tv', 'device-tv-box', 'device-android', 'device-ios', 'device-windows', 'device-notebook', 'device-browser'];
+    document.querySelectorAll('.device-icons b').forEach((el, i) => { el.textContent = ''; const img = document.createElement('img'); img.src = `/icons/${deviceIcons[i]}.png`; img.alt = ''; el.appendChild(img); });
+    const categoryIcons = ['category-sports', 'category-football', 'category-news', 'category-movies', 'category-series', 'category-kids', 'category-docs'];
+    document.querySelectorAll('.categories span').forEach((el, i) => { const label = el.textContent.replace(/^[^\p{L}]*/u, '').trim(); el.textContent = ''; const img = document.createElement('img'); img.src = `/icons/${categoryIcons[i]}.png`; img.alt = ''; el.append(img, label); });
+    const action = document.querySelector('.hero-actions .primary');
+    if (action) action.innerHTML = '<img class="action-icon" src="/icons/assinar-agora.png" alt=""> Assinar Agora';
+    const visual = document.querySelector('.device-visual');
+    if (visual) visual.style.backgroundImage = 'url(/cine-card.png)';
+  })();
+</script>
