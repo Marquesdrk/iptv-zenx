@@ -55,10 +55,14 @@
     document.querySelectorAll('.benefit-icon').forEach((el, i) => { el.textContent = ''; const img = document.createElement('img'); img.src = `/icons/${benefitIcons[i]}.png`; img.alt = ''; el.appendChild(img); });
     const deviceIcons = ['device-smart-tv', 'device-android-tv', 'device-tv-box', 'device-android', 'device-ios', 'device-windows', 'device-notebook', 'device-browser'];
     document.querySelectorAll('.device-icons b').forEach((el, i) => { el.textContent = ''; const img = document.createElement('img'); img.src = `/icons/${deviceIcons[i]}.png`; img.alt = ''; el.appendChild(img); });
+    const heroIcons = ['device-smart-tv', 'device-notebook', 'device-android', 'device-ios', 'device-windows'];
+    document.querySelectorAll('.platforms span b').forEach((el, i) => { el.textContent = ''; const img = document.createElement('img'); img.src = `/icons/${heroIcons[i]}.png`; img.alt = ''; el.appendChild(img); });
     const categoryIcons = ['category-sports', 'category-football', 'category-news', 'category-movies', 'category-series', 'category-kids', 'category-docs'];
     document.querySelectorAll('.categories span').forEach((el, i) => { const label = el.textContent.replace(/^[^\p{L}]*/u, '').trim(); el.textContent = ''; const img = document.createElement('img'); img.src = `/icons/${categoryIcons[i]}.png`; img.alt = ''; el.append(img, label); });
     const action = document.querySelector('.hero-actions .primary');
     if (action) action.innerHTML = '<img class="action-icon" src="/icons/assinar-agora.png" alt=""> Assinar Agora';
+    const whatsapp = document.querySelector('.float-wa');
+    if (whatsapp) { whatsapp.innerHTML = '<img src="/icons/whatsapp.png" alt="">'; whatsapp.setAttribute('aria-label', 'Fale conosco pelo WhatsApp'); }
     const visual = document.querySelector('.device-visual');
     if (visual) visual.style.backgroundImage = 'url(/cine-card.png)';
     const nav = document.querySelector('.navbar');
