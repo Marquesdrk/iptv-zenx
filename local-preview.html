@@ -61,5 +61,17 @@
     if (action) action.innerHTML = '<img class="action-icon" src="/icons/assinar-agora.png" alt=""> Assinar Agora';
     const visual = document.querySelector('.device-visual');
     if (visual) visual.style.backgroundImage = 'url(/cine-card.png)';
+    const nav = document.querySelector('.navbar');
+    if (nav) {
+      document.body.classList.add('dark-mode');
+      const toggle = document.createElement('button');
+      toggle.className = 'theme-toggle'; toggle.type = 'button';
+      toggle.setAttribute('aria-label', 'Alternar modo claro e escuro'); toggle.textContent = '☾';
+      nav.appendChild(toggle);
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        toggle.textContent = document.body.classList.contains('dark-mode') ? '☾' : '☼';
+      });
+    }
   })();
 </script>
