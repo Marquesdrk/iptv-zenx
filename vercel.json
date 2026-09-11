@@ -5,6 +5,9 @@
     { "src": "public/**", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "/cine.css", "dest": "/public/cine.css" },
+    { "src": "/icons/(.*)", "dest": "/public/icons/$1" },
+    { "src": "/(catalogo-.*\\.png)", "dest": "/public/$1" },
     { "src": "/(.*)", "dest": "/local-preview.html" }
   ]
 }
