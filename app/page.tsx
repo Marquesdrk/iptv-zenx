@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Bell, Check, ChevronLeft, ChevronRight, Grid2X2, Heart, Home, Menu, MessageCircle, Play, Plus, Search, Share2, Tv2, UserRound, X } from 'lucide-react';
 
-const WHATSAPP = '555197874289';
+const WHATSAPP = '5551998462019';
 const posters = [
   ['O Protetor', 'Ação', 'https://images.unsplash.com/photo-1533928298208-27ff66555d8d?auto=format&fit=crop&w=700&q=85'], ['Noite de Estreia', 'Filmes', 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=700&q=85'], ['Universo Azul', 'Documentário', 'https://images.unsplash.com/photo-1534791547706-6a6c0f8f3c12?auto=format&fit=crop&w=700&q=85'], ['Entre Linhas', 'Séries', 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=700&q=85'], ['Cidade em Foco', 'Suspense', 'https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=85'], ['Ponto de Virada', 'Esportes', 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=700&q=85'], ['Horizonte', 'Aventura', 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=700&q=85'], ['Depois do Sol', 'Romance', 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=85'], ['A Última Pista', 'Filmes', 'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=700&q=85'], ['O Encontro', 'Drama', 'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=700&q=85'],
 ];
